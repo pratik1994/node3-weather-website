@@ -11,7 +11,7 @@ const forecast = (lat,long, callback) => {
     callback('please check the parameter', undefined)
   }else{
     const forecast= response.body;
-    callback(undefined,`${forecast.daily.data[0].summary}It is currently ${forecast.currently.temperature} degrees out. There is ${forecast.currently.precipProbability}% chances of rain.`)
+    callback(undefined,`${forecast.daily.data[0].summary}It is currently ${forecast.currently.temperature} degrees out. The high today is ${forecast.daily.data[0].temperatureHigh} with a low of ${forecast.daily.data[0].temperatureLow}. There is ${forecast.currently.precipProbability}% chances of rain.`)
   }  
 })
 }
